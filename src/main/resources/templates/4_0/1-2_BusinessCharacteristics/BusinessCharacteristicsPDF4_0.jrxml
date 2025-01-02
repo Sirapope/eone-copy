@@ -1,0 +1,1614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="BusinessCharacteristicsPDF4" pageWidth="595" pageHeight="842" columnWidth="467" leftMargin="64" rightMargin="64" topMargin="48" bottomMargin="48" uuid="09a8621c-318b-4a80-944d-4902c77fe0f6">
+	<style name="Detail">
+		<box>
+			<pen lineWidth="0.25" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Header" mode="Opaque" backcolor="#D1D1D1" vTextAlign="Middle" fontName="Sarabun" fontSize="11" isBold="true">
+		<box leftPadding="0">
+			<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="ExportDescriptive" uuid="d8822121-eceb-4f33-a147-ad8c4bf0e284">
+		<parameter name="title" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="title" class="java.lang.String"/>
+		<field name="description" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="Export6Column" uuid="51fdc90e-2cd8-4e23-b0fd-0db7d28f34e1">
+		<parameter name="title" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="column1" class="java.lang.String"/>
+		<field name="column2" class="java.lang.String"/>
+		<field name="column3" class="java.lang.String"/>
+		<field name="column4" class="java.lang.String"/>
+		<field name="column5" class="java.lang.String"/>
+		<field name="column6" class="java.lang.String"/>
+		<field name="sequence" class="java.lang.String"/>
+		<field name="indent" class="java.lang.Integer"/>
+		<field name="first" class="java.lang.Boolean"/>
+		<field name="last" class="java.lang.Boolean"/>
+	</subDataset>
+	<subDataset name="Export3Column" uuid="ac63b312-8200-42d6-bc3c-2192cce9dd01">
+		<parameter name="title" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="question" class="java.lang.String"/>
+		<field name="description1" class="java.lang.String"/>
+		<field name="description2" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="BusinessOperations" class="java.lang.String"/>
+	<parameter name="RevenueStructure" class="java.lang.String"/>
+	<parameter name="Year1" class="java.lang.String"/>
+	<parameter name="Year2" class="java.lang.String"/>
+	<parameter name="Year3" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
+	<parameter name="businessCharacteristicsRemark" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="businessCharacteristicsIntroduction" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="bc01Introduction" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="bc01Remark" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="ProductIncomeList" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="ProductIncomeList2" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="ExportIncomeList" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="ExportIncomeList2" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="FirstPage" class="java.lang.Integer"/>
+	<parameter name="IsExcel" class="java.lang.Boolean"/>
+	<parameter name="ShareProfitList" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="OtherIncomeList" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="NotOperList" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="bc02Remark" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="bc0201Remark" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="bc02Introduction" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="bc0201Introduction" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="ProductsServiceInfo" class="java.lang.String"/>
+	<parameter name="ProductServiceInfoBusinessInnoDev" class="java.lang.String"/>
+	<parameter name="ResearchPolicy" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="ResearchDevelopmentTopic" class="java.lang.String"/>
+	<parameter name="productInfoIntroduction" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="productInfoRemark" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="ProductInfoList" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="ProductInfoDescription" class="java.lang.String"/>
+	<parameter name="ProductServiceInfoBusinessInnoDevList" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="MarketPolicy" class="java.lang.String"/>
+	<parameter name="bc0202Introduction" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="MarketPolicyInfoList" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="bc0202Remark" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="Procurement" class="java.lang.String"/>
+	<parameter name="bc0203Introduction" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="ProcurementList" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="bc0203Remark" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="Asset" class="java.lang.String"/>
+	<parameter name="bc0204Introduction" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="bc0204Remark" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="FixedAssets" class="java.lang.String"/>
+	<parameter name="IntangibleAssets" class="java.lang.String"/>
+	<parameter name="PermanentAppraisalPriceList" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="IntangibleAppraisalPriceList" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="SubsidiariesInvestmentPolicy" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="SubsidiariesInvestmentPolicyDescription" class="java.lang.String"/>
+	<parameter name="UnderConstructionProject" class="java.lang.String"/>
+	<parameter name="bc0205Introduction" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="bc0205Remark" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="UnderConstructionProjectPolicy" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="UnderConstructionProjectPolicyDescription" class="java.lang.String"/>
+	<parameter name="UnderConstructionProjectPolicyList" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="UnderConstructionProjectPolicyDetail" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="IntangibleAppraisalPriceImgInfoList" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="UnderConstructionProjectInfoImgInfoList" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="Title" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="ParentTitle" class="java.lang.String"/>
+	<parameter name="IncomeStructureImage" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="SUBREPORT_FOLDER" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<pageHeader>
+		<band height="28">
+			<subreport>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" isPrintRepeatedValues="false" x="0" y="0" width="467" height="28" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" uuid="002dcbff-a810-4df9-8404-9a8f80b1d20b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[$P{Title}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "PageTitle.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="28" splitType="Stretch">
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="28" uuid="bc3cd100-a8d3-48a1-885f-8e7c77b45ebf">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="0"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="18" isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BusinessOperations}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="11">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<printWhenExpression><![CDATA[$P{businessCharacteristicsIntroduction} != null]]></printWhenExpression>
+			<subreport>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="11" uuid="2ec0bef8-9482-48a6-9418-146fd2021903">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[$P{businessCharacteristicsIntroduction}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubIntroductionPDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="12">
+			<printWhenExpression><![CDATA[$P{businessCharacteristicsRemark} != null]]></printWhenExpression>
+			<subreport>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="12" uuid="060d3897-08b0-4b0a-9522-d5ccf30e6a4e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[$P{businessCharacteristicsRemark}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubRemarkTopicPDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="4">
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="467" height="4" uuid="dc0a0d92-9f4c-40a1-9f30-e51be423cf81">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="24" splitType="Stretch">
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="24" uuid="bc3cd100-a8d3-48a1-885f-8e7c77b45ebf">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="0"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="15" isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{RevenueStructure}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="11">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<printWhenExpression><![CDATA[$P{bc01Introduction} != null]]></printWhenExpression>
+			<subreport>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="11" uuid="2ec0bef8-9482-48a6-9418-146fd2021903">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[$P{bc01Introduction}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubIntroductionPDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="12">
+			<printWhenExpression><![CDATA[$P{bc01Remark} != null]]></printWhenExpression>
+			<subreport>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="12" uuid="060d3897-08b0-4b0a-9522-d5ccf30e6a4e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[$P{bc01Remark}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubRemarkTopicPDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="4">
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="467" height="4" uuid="c268c774-8f10-43b1-b5b3-edd2943d9ace">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="20">
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="20" uuid="2758c06c-b2b5-4ca7-bf95-45e1343a769c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="0"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="13" isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{main_node1.node1.section2.topic1.question1}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="33">
+			<printWhenExpression><![CDATA[$P{ProductIncomeList} != null]]></printWhenExpression>
+			<subreport>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" isPrintRepeatedValues="false" x="0" y="0" width="467" height="29" uuid="74f0a516-16c1-4351-be23-b6284eebd525">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<subreportParameter name="year1">
+					<subreportParameterExpression><![CDATA[$P{Year1}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="year2">
+					<subreportParameterExpression><![CDATA[$P{Year2}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="year3">
+					<subreportParameterExpression><![CDATA[$P{Year3}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{ProductIncomeList}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubThreeYearStructurePDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="29" width="467" height="4" uuid="f4f49558-6be5-465f-80b0-8a671a3618fa">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="4">
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="467" height="4" uuid="11182fa9-30a3-4709-8ea9-2bedf695bb95">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="20">
+			<printWhenExpression><![CDATA[$P{IncomeStructureImage} != null]]></printWhenExpression>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="0" y="0" width="467" height="20" uuid="e4f4262b-04ff-4579-8fd1-d6ff37b72712">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.tabStopWidth" value="px"/>
+				</reportElement>
+				<box bottomPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="13" isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					<paragraph tabStopWidth="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{main_node1.node1.section2.topic1.question3}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="16">
+			<printWhenExpression><![CDATA[$P{IncomeStructureImage} != null]]></printWhenExpression>
+			<subreport>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="12" uuid="1223f82f-f9c4-4e01-b1d9-ea1782172c63">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[$P{IncomeStructureImage}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubImagePDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="12" width="467" height="4" uuid="e6113066-88d0-46f7-9cc6-93923207e46e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="4">
+			<printWhenExpression><![CDATA[$P{IncomeStructureImage} != null]]></printWhenExpression>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="467" height="4" uuid="a2a6f538-765b-41b9-900a-b0271aefa5af">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="20">
+			<textField textAdjust="StretchHeight">
+				<reportElement x="0" y="0" width="467" height="20" uuid="2758c06c-b2b5-4ca7-bf95-45e1343a769c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.tabStopWidth" value="px"/>
+				</reportElement>
+				<box bottomPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="13" isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					<paragraph tabStopWidth="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{main_node1.node1.section2.topic1.question2}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="33">
+			<printWhenExpression><![CDATA[$P{ExportIncomeList} != null]]></printWhenExpression>
+			<subreport>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" isPrintRepeatedValues="false" x="0" y="0" width="467" height="29" uuid="74f0a516-16c1-4351-be23-b6284eebd525">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<subreportParameter name="year1">
+					<subreportParameterExpression><![CDATA[$P{Year1}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="year2">
+					<subreportParameterExpression><![CDATA[$P{Year2}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="year3">
+					<subreportParameterExpression><![CDATA[$P{Year3}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{ExportIncomeList}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubThreeYearStructurePDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="29" width="467" height="4" uuid="f4f49558-6be5-465f-80b0-8a671a3618fa">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="33">
+			<printWhenExpression><![CDATA[$P{ExportIncomeList2} != null]]></printWhenExpression>
+			<subreport>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" isPrintRepeatedValues="false" x="0" y="0" width="467" height="29" uuid="74f0a516-16c1-4351-be23-b6284eebd525">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<subreportParameter name="year1">
+					<subreportParameterExpression><![CDATA[$P{Year1}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="year2">
+					<subreportParameterExpression><![CDATA[$P{Year2}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="year3">
+					<subreportParameterExpression><![CDATA[$P{Year3}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{ExportIncomeList2}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubThreeYearStructurePDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+			<frame>
+				<reportElement x="0" y="29" width="467" height="4" uuid="f4f49558-6be5-465f-80b0-8a671a3618fa">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="20">
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="20" uuid="2758c06c-b2b5-4ca7-bf95-45e1343a769c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="0"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="13" isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{main_node1.node1.section2.topic3}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="33">
+			<printWhenExpression><![CDATA[$P{OtherIncomeList} != null]]></printWhenExpression>
+			<subreport>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" isPrintRepeatedValues="false" x="0" y="0" width="467" height="29" uuid="74f0a516-16c1-4351-be23-b6284eebd525">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<subreportParameter name="year1">
+					<subreportParameterExpression><![CDATA[$P{Year1}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="year2">
+					<subreportParameterExpression><![CDATA[$P{Year2}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="year3">
+					<subreportParameterExpression><![CDATA[$P{Year3}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{OtherIncomeList}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubThreeYearStructurePDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="29" width="467" height="4" uuid="f4f49558-6be5-465f-80b0-8a671a3618fa">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="20">
+			<printWhenExpression><![CDATA[$P{ShareProfitList} != null]]></printWhenExpression>
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="20" uuid="2758c06c-b2b5-4ca7-bf95-45e1343a769c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="0"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="13" isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{main_node1.node1.section2.topic4}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="33">
+			<printWhenExpression><![CDATA[$P{ShareProfitList} != null]]></printWhenExpression>
+			<subreport>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" isPrintRepeatedValues="false" x="0" y="0" width="467" height="29" uuid="74f0a516-16c1-4351-be23-b6284eebd525">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<subreportParameter name="year1">
+					<subreportParameterExpression><![CDATA[$P{Year1}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="year2">
+					<subreportParameterExpression><![CDATA[$P{Year2}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="year3">
+					<subreportParameterExpression><![CDATA[$P{Year3}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{ShareProfitList}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubThreeYearStructurePDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="29" width="467" height="4" uuid="af1b7a48-4a47-4555-8d40-760b11f98b54">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="25" splitType="Stretch">
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="1" width="467" height="24" uuid="bc3cd100-a8d3-48a1-885f-8e7c77b45ebf">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="0"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="15" isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ProductsServiceInfo}]]></textFieldExpression>
+			</textField>
+			<break>
+				<reportElement x="0" y="0" width="100" height="1" uuid="50b4c416-2ab2-4e0d-9fdb-476d13697fc7">
+					<printWhenExpression><![CDATA[$P{ShareProfitList} != null]]></printWhenExpression>
+				</reportElement>
+			</break>
+		</band>
+		<band height="11">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<printWhenExpression><![CDATA[$P{bc02Introduction} != null]]></printWhenExpression>
+			<subreport>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="11" uuid="2ec0bef8-9482-48a6-9418-146fd2021903">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[$P{bc02Introduction}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubIntroductionPDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="12">
+			<printWhenExpression><![CDATA[$P{bc02Remark} != null]]></printWhenExpression>
+			<subreport>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="12" uuid="060d3897-08b0-4b0a-9522-d5ccf30e6a4e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[$P{bc02Remark}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubRemarkTopicPDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="4">
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="467" height="4" uuid="7304d9b5-4c10-448e-b596-95511ca6debb">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="24" splitType="Stretch">
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="24" uuid="bc3cd100-a8d3-48a1-885f-8e7c77b45ebf">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="0"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="15" isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ProductServiceInfoBusinessInnoDev}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="11">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<printWhenExpression><![CDATA[$P{bc0201Introduction} != null]]></printWhenExpression>
+			<subreport>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="11" uuid="2ec0bef8-9482-48a6-9418-146fd2021903">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[$P{bc0201Introduction}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubIntroductionPDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="12">
+			<printWhenExpression><![CDATA[!$P{ProductServiceInfoBusinessInnoDevList}.getData().isEmpty()]]></printWhenExpression>
+			<subreport>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="12" uuid="bfb7da81-2224-43e0-8870-a5f77cbcaaa3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<subreportParameter name="Column1Header">
+					<subreportParameterExpression><![CDATA[$R{main_node1.node1.section2.topic2.question6.sub_topic1}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="REPORT_RESOURCE_BUNDLE">
+					<subreportParameterExpression><![CDATA[$P{REPORT_RESOURCE_BUNDLE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{ProductServiceInfoBusinessInnoDevList}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} +$P{SUBREPORT_FOLDER} + "SubMarketPolicyInfo4_0.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="12">
+			<printWhenExpression><![CDATA[$P{bc0201Remark} != null]]></printWhenExpression>
+			<subreport>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="12" uuid="060d3897-08b0-4b0a-9522-d5ccf30e6a4e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[$P{bc0201Remark}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubRemarkTopicPDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="4">
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="467" height="4" uuid="a970caaf-5635-4155-a014-5e2473be2dd7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</frame>
+		</band>
+		<band height="24" splitType="Stretch">
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="24" uuid="bc3cd100-a8d3-48a1-885f-8e7c77b45ebf">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="0"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="15" isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new thaicut().wordwrap($P{ResearchDevelopmentTopic},75)]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="11">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<printWhenExpression><![CDATA[$P{productInfoIntroduction} != null]]></printWhenExpression>
+			<subreport>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="11" uuid="2ec0bef8-9482-48a6-9418-146fd2021903">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[$P{productInfoIntroduction}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubIntroductionPDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="16">
+			<printWhenExpression><![CDATA[$P{ResearchPolicy} != null]]></printWhenExpression>
+			<subreport>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="12" uuid="060d3897-08b0-4b0a-9522-d5ccf30e6a4e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[$P{ResearchPolicy}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubPolicyPDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="12" width="467" height="4" uuid="11f20ac7-ea4b-44c3-afb6-129c5cda049e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="20" splitType="Stretch">
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="20" uuid="bc3cd100-a8d3-48a1-885f-8e7c77b45ebf">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="0"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="13" isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{main_node1.node1.section2.topic2.question4}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="14">
+			<printWhenExpression><![CDATA[$P{ProductInfoList} != null]]></printWhenExpression>
+			<subreport>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" isPrintRepeatedValues="false" x="0" y="0" width="467" height="10" uuid="74f0a516-16c1-4351-be23-b6284eebd525">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<subreportParameter name="year1">
+					<subreportParameterExpression><![CDATA[$P{Year1}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="year2">
+					<subreportParameterExpression><![CDATA[$P{Year2}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="year3">
+					<subreportParameterExpression><![CDATA[$P{Year3}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{ProductInfoList}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubThreeYearStructurePDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="10" width="467" height="4" uuid="23baaee5-bf0f-4de8-afd5-74e50dcdc616">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="24" splitType="Stretch">
+			<printWhenExpression><![CDATA[$P{ProductInfoDescription} != null]]></printWhenExpression>
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="24" uuid="bc3cd100-a8d3-48a1-885f-8e7c77b45ebf">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="0"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="15" isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{main_node1.node1.section2.topic2.question5}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="21" splitType="Stretch">
+			<printWhenExpression><![CDATA[$P{ProductInfoDescription} != null]]></printWhenExpression>
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="17" uuid="bc3cd100-a8d3-48a1-885f-8e7c77b45ebf">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="0"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="11" isBold="false" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ProductInfoDescription}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="17" width="467" height="4" uuid="d0076dda-bf78-47a6-ab61-b9a953b91a5d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="12">
+			<printWhenExpression><![CDATA[$P{productInfoRemark} != null]]></printWhenExpression>
+			<subreport>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="12" uuid="060d3897-08b0-4b0a-9522-d5ccf30e6a4e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[$P{productInfoRemark}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubRemarkTopicPDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="4">
+			<printWhenExpression><![CDATA[$P{ProductInfoDescription} != null]]></printWhenExpression>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="467" height="4" uuid="466beb91-4b97-465c-87b6-59998f0f41c7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="24" splitType="Stretch">
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="24" uuid="bc3cd100-a8d3-48a1-885f-8e7c77b45ebf">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="0"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="15" isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{MarketPolicy}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="11">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<printWhenExpression><![CDATA[$P{bc0202Introduction} != null]]></printWhenExpression>
+			<subreport>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="11" uuid="2ec0bef8-9482-48a6-9418-146fd2021903">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[$P{bc0202Introduction}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubIntroductionPDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="16">
+			<printWhenExpression><![CDATA[!$P{MarketPolicyInfoList}.getData() .isEmpty()]]></printWhenExpression>
+			<subreport>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="12" uuid="060d3897-08b0-4b0a-9522-d5ccf30e6a4e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<subreportParameter name="Column1Header">
+					<subreportParameterExpression><![CDATA[$R{main_node1.node1.section2.topic2.question6.sub_topic1}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="REPORT_RESOURCE_BUNDLE">
+					<subreportParameterExpression><![CDATA[$P{REPORT_RESOURCE_BUNDLE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{MarketPolicyInfoList}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + $P{SUBREPORT_FOLDER} 
++ "SubMarketPolicyInfo4_0.jasper"]]></subreportExpression>
+			</subreport>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="12" width="467" height="4" uuid="5bcbebf7-bd81-49a5-a69b-7fa92b399cb7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="12">
+			<printWhenExpression><![CDATA[$P{bc0202Remark} != null]]></printWhenExpression>
+			<subreport>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="12" uuid="060d3897-08b0-4b0a-9522-d5ccf30e6a4e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[$P{bc0202Remark}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubRemarkTopicPDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="4">
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="467" height="4" uuid="984307d9-f6ac-49ae-8702-3d14bcb515cc">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="24" splitType="Stretch">
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="24" uuid="bc3cd100-a8d3-48a1-885f-8e7c77b45ebf">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="0"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="15" isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Procurement}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="11">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<printWhenExpression><![CDATA[$P{bc0203Introduction} != null]]></printWhenExpression>
+			<subreport>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="11" uuid="2ec0bef8-9482-48a6-9418-146fd2021903">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[$P{bc0203Introduction}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubIntroductionPDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="16">
+			<printWhenExpression><![CDATA[!$P{ProcurementList}.getData() .isEmpty()]]></printWhenExpression>
+			<subreport>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="12" uuid="060d3897-08b0-4b0a-9522-d5ccf30e6a4e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<subreportParameter name="Column1Header">
+					<subreportParameterExpression><![CDATA[$R{main_node1.node1.section2.topic2.question10.sub_topic1}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="Column2Header">
+					<subreportParameterExpression><![CDATA[$R{main_node1.node1.section2.topic2.question10.sub_topic2}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="RawMaterialColumn1Header">
+					<subreportParameterExpression><![CDATA[$R{main_node1.node1.section2.topic2.question10.sub_topic3}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="RawMaterialColumn2Header">
+					<subreportParameterExpression><![CDATA[$R{main_node1.node1.section2.topic2.question10.sub_topic4}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="REPORT_RESOURCE_BUNDLE">
+					<subreportParameterExpression><![CDATA[$P{REPORT_RESOURCE_BUNDLE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{ProcurementList}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + $P{SUBREPORT_FOLDER} + "SubProcurement4_0.jasper"]]></subreportExpression>
+			</subreport>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="12" width="467" height="4" uuid="69a23971-a655-4503-abdb-7143e4da6af2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="12">
+			<printWhenExpression><![CDATA[$P{bc0203Remark} != null]]></printWhenExpression>
+			<subreport>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="12" uuid="060d3897-08b0-4b0a-9522-d5ccf30e6a4e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[$P{bc0203Remark}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubRemarkTopicPDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="4">
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="467" height="4" uuid="05b20346-70db-4e08-8d8e-952cf08bf2da">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="24" splitType="Stretch">
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="24" uuid="bc3cd100-a8d3-48a1-885f-8e7c77b45ebf">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="0"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="15" isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Asset}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="11">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<printWhenExpression><![CDATA[$P{bc0204Introduction} != null]]></printWhenExpression>
+			<subreport>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="11" uuid="2ec0bef8-9482-48a6-9418-146fd2021903">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[$P{bc0204Introduction}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubIntroductionPDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="4">
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="467" height="4" uuid="fe1e7ffa-5bb2-455a-9e54-1beaa15b5bce">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="24" splitType="Stretch">
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="24" uuid="bc3cd100-a8d3-48a1-885f-8e7c77b45ebf">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="0"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="15" isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{main_node1.node1.section2.topic2.question15}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="21" splitType="Stretch">
+			<printWhenExpression><![CDATA[$P{ProductInfoDescription} != null && $P{FixedAssets} != null]]></printWhenExpression>
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="17" uuid="bc3cd100-a8d3-48a1-885f-8e7c77b45ebf">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="0"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="11" isBold="false" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FixedAssets}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement x="0" y="17" width="467" height="4" uuid="d0076dda-bf78-47a6-ab61-b9a953b91a5d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="24" splitType="Stretch">
+			<printWhenExpression><![CDATA[!$P{PermanentAppraisalPriceList}.getData().isEmpty()]]></printWhenExpression>
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="24" uuid="bc3cd100-a8d3-48a1-885f-8e7c77b45ebf">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="0"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="15" isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{main_node1.node1.section2.topic2.question16}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="24">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<printWhenExpression><![CDATA[!$P{PermanentAppraisalPriceList}.getData().isEmpty()]]></printWhenExpression>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="20" width="467" height="4" uuid="2460c26f-d5cf-475e-8cf9-8fdeed29e28b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+			<subreport>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="20" uuid="a8ffd743-40b2-430e-99f6-9ba4c57f28c8">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<subreportParameter name="header1">
+					<subreportParameterExpression><![CDATA[$R{main_node1.node1.section2.topic2.question16.header1}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="header2">
+					<subreportParameterExpression><![CDATA[$R{main_node1.node1.section2.topic2.question16.header2}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="header3">
+					<subreportParameterExpression><![CDATA[$R{main_node1.node1.section2.topic2.question16.header3}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="header4">
+					<subreportParameterExpression><![CDATA[$R{main_node1.node1.section2.topic2.question16.header4}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="header5">
+					<subreportParameterExpression><![CDATA[$R{main_node1.node1.section2.topic2.question16.header5}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{PermanentAppraisalPriceList}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + $P{SUBREPORT_FOLDER} + "SubPermanentAppraisalPrice.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="4">
+			<printWhenExpression><![CDATA[!$P{PermanentAppraisalPriceList}.getData().isEmpty()]]></printWhenExpression>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="467" height="4" uuid="22cd69bc-8e30-454b-8b52-fdf067925708">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="24" splitType="Stretch">
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="24" uuid="bc3cd100-a8d3-48a1-885f-8e7c77b45ebf">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="0"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="15" isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{main_node1.node1.section2.topic2.question17}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20" splitType="Stretch">
+			<printWhenExpression><![CDATA[$P{ProductInfoDescription} != null && $P{IntangibleAssets} != null]]></printWhenExpression>
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="16" uuid="bc3cd100-a8d3-48a1-885f-8e7c77b45ebf">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="0"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="11" isBold="false" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{IntangibleAssets}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="16" width="467" height="4" uuid="d0076dda-bf78-47a6-ab61-b9a953b91a5d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="24" splitType="Stretch">
+			<printWhenExpression><![CDATA[!$P{IntangibleAppraisalPriceList}.getData().isEmpty()]]></printWhenExpression>
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="24" uuid="bc3cd100-a8d3-48a1-885f-8e7c77b45ebf">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="0"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="15" isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{main_node1.node1.section2.topic2.question18}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="24" splitType="Prevent">
+			<printWhenExpression><![CDATA[!$P{IntangibleAppraisalPriceList}.getData().isEmpty()]]></printWhenExpression>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="20" width="467" height="4" uuid="4da0d0bc-db59-4eb3-8ae9-e7b9aafc27c9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+			<subreport>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="20" uuid="e55c8880-ce24-49cc-9abd-9cf10b7ff0de">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<subreportParameter name="header1">
+					<subreportParameterExpression><![CDATA[$R{main_node1.node1.section2.topic2.question18.header1}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="header2">
+					<subreportParameterExpression><![CDATA[$R{main_node1.node1.section2.topic2.question18.header2}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="header3">
+					<subreportParameterExpression><![CDATA[$R{main_node1.node1.section2.topic2.question18.header3}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="header4">
+					<subreportParameterExpression><![CDATA[$R{main_node1.node1.section2.topic2.question18.header4}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{IntangibleAppraisalPriceList}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + $P{SUBREPORT_FOLDER} + "SubIntangibleAppraisalPrice.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="4">
+			<printWhenExpression><![CDATA[!$P{IntangibleAppraisalPriceList}.getData().isEmpty()]]></printWhenExpression>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="467" height="4" uuid="ee842a42-f2ab-44a4-b2da-56929f4069ac">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="24">
+			<printWhenExpression><![CDATA[!$P{IntangibleAppraisalPriceImgInfoList}.getData().isEmpty()]]></printWhenExpression>
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="24" uuid="33418f08-5872-4530-80b1-55267f7b0abb">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="0"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="15" isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{main_node1.node1.section2.topic2.question30}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="19">
+			<printWhenExpression><![CDATA[!$P{IntangibleAppraisalPriceImgInfoList}.getData().isEmpty()]]></printWhenExpression>
+			<subreport>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="15" uuid="3cf0d8e3-04a6-4790-83a8-ab103cd39962"/>
+				<dataSourceExpression><![CDATA[$P{IntangibleAppraisalPriceImgInfoList}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubImagePDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="467" height="4" uuid="53806012-d175-4134-a0be-1a98f2141909">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="4">
+			<printWhenExpression><![CDATA[!$P{IntangibleAppraisalPriceImgInfoList}.getData().isEmpty()]]></printWhenExpression>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="467" height="4" uuid="50b328c4-c62c-405b-ba15-247b7f4d9c6e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="24" splitType="Stretch">
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="24" uuid="bc3cd100-a8d3-48a1-885f-8e7c77b45ebf">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="0"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="15" isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{main_node1.node1.section2.topic2.question20}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="16">
+			<printWhenExpression><![CDATA[$P{SubsidiariesInvestmentPolicy} != null]]></printWhenExpression>
+			<subreport>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="12" uuid="060d3897-08b0-4b0a-9522-d5ccf30e6a4e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[$P{SubsidiariesInvestmentPolicy}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubPolicyPDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="12" width="467" height="4" uuid="6a100579-47c0-40bf-aac3-86e320475626">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="20" splitType="Stretch">
+			<printWhenExpression><![CDATA[$P{SubsidiariesInvestmentPolicyDescription} != null]]></printWhenExpression>
+			<frame>
+				<reportElement x="0" y="16" width="467" height="4" uuid="d0076dda-bf78-47a6-ab61-b9a953b91a5d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="16" uuid="7c57ec23-893b-44f3-a860-bb3c79db1dfe">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="0"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="11" isBold="false" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SubsidiariesInvestmentPolicyDescription}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="12">
+			<printWhenExpression><![CDATA[$P{bc0204Remark} != null]]></printWhenExpression>
+			<subreport>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="12" uuid="060d3897-08b0-4b0a-9522-d5ccf30e6a4e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[$P{bc0204Remark}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubRemarkTopicPDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="4">
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="467" height="4" uuid="075a6a0d-48fd-4b11-b983-c9daa2093d5d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="24" splitType="Stretch">
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="24" uuid="bc3cd100-a8d3-48a1-885f-8e7c77b45ebf">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="0"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="15" isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{UnderConstructionProject}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="11">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<printWhenExpression><![CDATA[$P{bc0205Introduction} != null]]></printWhenExpression>
+			<subreport>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="11" uuid="2ec0bef8-9482-48a6-9418-146fd2021903">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[$P{bc0205Introduction}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubIntroductionPDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="16">
+			<printWhenExpression><![CDATA[$P{UnderConstructionProjectPolicy} != null]]></printWhenExpression>
+			<subreport>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="12" uuid="060d3897-08b0-4b0a-9522-d5ccf30e6a4e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[$P{UnderConstructionProjectPolicy}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubPolicyPDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="12" width="467" height="4" uuid="20c3cc39-d018-4fb8-a98c-3e0c6ca28f4a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="20" splitType="Stretch">
+			<printWhenExpression><![CDATA[$P{UnderConstructionProjectPolicyDescription} != null]]></printWhenExpression>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="16" width="467" height="4" uuid="d0076dda-bf78-47a6-ab61-b9a953b91a5d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="16" uuid="6f81fd19-03d4-436d-bfe6-54718d609e7c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="0"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="11" isBold="false" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{UnderConstructionProjectPolicyDescription}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="4">
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="467" height="4" uuid="d32f7afe-5914-4fd2-967f-586fcc29d80a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="24" splitType="Stretch">
+			<printWhenExpression><![CDATA[$P{UnderConstructionProjectPolicy} != null || $P{UnderConstructionProjectPolicyDetail} != null]]></printWhenExpression>
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="24" uuid="bc3cd100-a8d3-48a1-885f-8e7c77b45ebf">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="0"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="15" isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{main_node1.node1.section2.topic2.question23}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="21" splitType="Prevent">
+			<printWhenExpression><![CDATA[!$P{UnderConstructionProjectPolicyDetail}.getData().isEmpty()]]></printWhenExpression>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="17" width="467" height="4" uuid="4da0d0bc-db59-4eb3-8ae9-e7b9aafc27c9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+			<componentElement>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="17" uuid="455bdd13-016c-477c-ac0f-911bacbb3f81">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Export3Column" uuid="87c8c9aa-3ca3-4323-a715-8f4dd30d3fcb">
+						<dataSourceExpression><![CDATA[$P{UnderConstructionProjectPolicyDetail}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="183" uuid="900f9ea0-8130-4966-9e91-e393d334e8fb">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:detailCell height="17">
+							<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField textAdjust="StretchHeight">
+								<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="180" height="17" uuid="6d9cb940-c34c-4a1b-94bc-4f22c3fe0d17">
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="com.jaspersoft.studio.unit.y" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="8">
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Top" markup="html">
+									<font fontName="Sarabun" size="11"/>
+									<paragraph lineSpacing="Single" lineSpacingSize="0.0"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{question}]]></textFieldExpression>
+							</textField>
+							<textField textAdjust="StretchHeight">
+								<reportElement stretchType="RelativeToTallestObject" x="180" y="0" width="3" height="17" uuid="d2a572f6-eaa2-420e-9130-fc2c5649af8f">
+									<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="com.jaspersoft.studio.unit.y" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+								</reportElement>
+								<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="8">
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Top" markup="html">
+									<font fontName="Sarabun" size="11"/>
+									<paragraph lineSpacing="Single" lineSpacingSize="0.0" leftIndent="0"/>
+								</textElement>
+								<textFieldExpression><![CDATA[":"]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="278" uuid="4619f1cf-2229-4171-8777-5152052acd20">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:detailCell height="17">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField textAdjust="StretchHeight">
+								<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="278" height="17" uuid="a3ef861d-8738-48a1-8515-301499acb588">
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="com.jaspersoft.studio.unit.y" value="px"/>
+									<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+								</reportElement>
+								<box topPadding="0" leftPadding="0">
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement verticalAlignment="Top" markup="html">
+									<font fontName="Sarabun" size="11"/>
+									<paragraph lineSpacing="Single" lineSpacingSize="0.0" leftIndent="4"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{description1}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:detail>
+						<printWhenExpression><![CDATA[$F{description1} != null]]></printWhenExpression>
+					</jr:detail>
+				</jr:table>
+			</componentElement>
+		</band>
+		<band height="4">
+			<printWhenExpression><![CDATA[$P{UnderConstructionProjectPolicy} != null || $P{UnderConstructionProjectPolicyDetail} != null]]></printWhenExpression>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="467" height="4" uuid="55268119-f50a-4c2d-a528-fdfdfd646ee0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="24" splitType="Stretch">
+			<printWhenExpression><![CDATA[!$P{UnderConstructionProjectPolicyList}.getData().isEmpty()]]></printWhenExpression>
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="24" uuid="bc3cd100-a8d3-48a1-885f-8e7c77b45ebf">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="0"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="15" isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{main_node1.node1.section2.topic2.question24}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="55" splitType="Prevent">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<printWhenExpression><![CDATA[!$P{UnderConstructionProjectPolicyList}.getData().isEmpty()]]></printWhenExpression>
+			<componentElement>
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="467" height="51" uuid="26d220b4-f319-49eb-9a59-848959249eed">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Export6Column" uuid="aa564fa4-929f-4b0b-a9a5-2be70bc05a64">
+						<dataSourceExpression><![CDATA[$P{UnderConstructionProjectPolicyList}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="96" uuid="bbc4c7b9-a9c0-4935-b8d4-4010b8e9a1cc">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:columnHeader style="Header" height="30" rowSpan="1">
+							<textField textAdjust="StretchHeight">
+								<reportElement x="0" y="0" width="96" height="30" uuid="53c53693-db25-4f4c-8fab-4da73cd34e94">
+									<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+									<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+								</reportElement>
+								<box topPadding="4" leftPadding="0" bottomPadding="4"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Sarabun" size="11" isBold="true"/>
+									<paragraph leftIndent="8" rightIndent="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$R{main_node1.node1.section2.topic2.question24.header1}]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Detail" height="21">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField textAdjust="StretchHeight">
+								<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="96" height="21" uuid="2c79f0dd-26cf-47cf-940e-74ae9076ac39">
+									<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+									<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+								</reportElement>
+								<box topPadding="4" leftPadding="0" bottomPadding="4"/>
+								<textElement verticalAlignment="Middle" markup="html">
+									<font fontName="Sarabun" size="11"/>
+									<paragraph leftIndent="8" rightIndent="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{column1}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="77" uuid="f9ed7e92-e76f-4b2d-aac9-5d2d801d7bed">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:columnHeader style="Header" height="30" rowSpan="1">
+							<textField textAdjust="StretchHeight">
+								<reportElement x="0" y="0" width="77" height="30" uuid="c90ff240-a0bf-4eab-8c47-5f4b42eb1f54">
+									<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+									<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+								</reportElement>
+								<box topPadding="4" leftPadding="0" bottomPadding="4"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font fontName="Sarabun" size="11" isBold="true"/>
+									<paragraph leftIndent="8" rightIndent="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$R{main_node1.node1.section2.topic2.question24.header2}]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Detail" height="21">
+							<textField textAdjust="StretchHeight">
+								<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="77" height="21" uuid="d8e2b1c8-4f75-41b5-9f88-9b9378739256">
+									<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+									<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+								</reportElement>
+								<box topPadding="4" leftPadding="0" bottomPadding="4"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle" markup="html">
+									<font fontName="Sarabun" size="11"/>
+									<paragraph leftIndent="8" rightIndent="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{column2}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="64" uuid="dbb0d803-8a8e-4c61-b46f-e92f22ce84e6">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						<jr:columnHeader style="Header" height="30" rowSpan="1">
+							<textField textAdjust="StretchHeight">
+								<reportElement x="0" y="0" width="64" height="30" uuid="70e6b186-2a97-4fb1-8429-038b6d9ae272">
+									<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+									<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+								</reportElement>
+								<box topPadding="4" leftPadding="0" bottomPadding="4"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Sarabun" size="11" isBold="true"/>
+									<paragraph leftIndent="8" rightIndent="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$R{main_node1.node1.section2.topic2.question24.header3}]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Detail" height="21">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField textAdjust="StretchHeight">
+								<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="64" height="21" uuid="34532930-fb41-4fdb-9799-070429671807">
+									<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+									<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+								</reportElement>
+								<box topPadding="4" leftPadding="0" bottomPadding="4"/>
+								<textElement verticalAlignment="Middle" markup="html">
+									<font fontName="Sarabun" size="11"/>
+									<paragraph leftIndent="8" rightIndent="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{column3}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="62" uuid="7849ac03-5494-4524-a169-b7f36d1ea9e7">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+						<jr:columnHeader style="Header" height="30" rowSpan="1">
+							<textField textAdjust="StretchHeight">
+								<reportElement x="0" y="0" width="62" height="30" uuid="b46de0ae-8a36-4cd3-84e9-0e944b219ca7">
+									<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+									<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+								</reportElement>
+								<box topPadding="4" leftPadding="0" bottomPadding="4"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Sarabun" size="11" isBold="true"/>
+									<paragraph leftIndent="8" rightIndent="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$R{main_node1.node1.section2.topic2.question24.header4}]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Detail" height="21">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField textAdjust="StretchHeight">
+								<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="62" height="21" uuid="151248b2-3184-4e05-aee0-618b25eeb336">
+									<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+									<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+								</reportElement>
+								<box topPadding="4" leftPadding="0" bottomPadding="4"/>
+								<textElement verticalAlignment="Middle" markup="html">
+									<font fontName="Sarabun" size="11"/>
+									<paragraph leftIndent="8" rightIndent="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{column4}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="72" uuid="c54cf1e3-8b05-4c1f-b677-96267760dd78">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+						<jr:columnHeader style="Header" height="30" rowSpan="1">
+							<textField textAdjust="StretchHeight">
+								<reportElement x="0" y="0" width="72" height="30" uuid="e6bd3014-f392-403d-b51a-ab8f70e933da">
+									<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+									<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+								</reportElement>
+								<box topPadding="4" leftPadding="0" bottomPadding="4"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font fontName="Sarabun" size="11" isBold="true"/>
+									<paragraph leftIndent="8" rightIndent="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$R{main_node1.node1.section2.topic2.question24.header5}]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Detail" height="21">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField textAdjust="StretchHeight">
+								<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="72" height="21" uuid="92f7696c-5cc4-4611-9010-2c81743fed41">
+									<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+									<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+								</reportElement>
+								<box topPadding="4" leftPadding="0" bottomPadding="4"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle" markup="html">
+									<font fontName="Sarabun" size="11"/>
+									<paragraph leftIndent="8" rightIndent="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{column5}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="96" uuid="c3658bb3-68a1-403c-a4c7-67ae1e6440ca">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column6"/>
+						<jr:columnHeader style="Header" height="30" rowSpan="1">
+							<textField textAdjust="StretchHeight">
+								<reportElement x="0" y="0" width="96" height="30" uuid="527c5500-97cf-4af9-83ca-6e3be5140278">
+									<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+									<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+								</reportElement>
+								<box topPadding="4" leftPadding="0" bottomPadding="4"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Sarabun" size="11" isBold="true"/>
+									<paragraph leftIndent="8" rightIndent="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$R{main_node1.node1.section2.topic2.question24.header6}]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Detail" height="21">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField textAdjust="StretchHeight">
+								<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="96" height="21" uuid="812e1dfe-4a1f-48c3-940d-df427324619c">
+									<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+									<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+								</reportElement>
+								<box topPadding="4" leftPadding="0" bottomPadding="4"/>
+								<textElement verticalAlignment="Middle" markup="html">
+									<font fontName="Sarabun" size="11"/>
+									<paragraph leftIndent="8" rightIndent="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{column6}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="51" width="467" height="4" uuid="2460c26f-d5cf-475e-8cf9-8fdeed29e28b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="4">
+			<printWhenExpression><![CDATA[!$P{UnderConstructionProjectPolicyList}.getData().isEmpty()]]></printWhenExpression>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="467" height="4" uuid="dde2581a-bc1e-4a54-8524-b496ee5d6cf0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="24">
+			<printWhenExpression><![CDATA[$P{UnderConstructionProjectInfoImgInfoList} != null && !$P{UnderConstructionProjectInfoImgInfoList}.getData().isEmpty()]]></printWhenExpression>
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="24" uuid="00b618b3-a6ed-4705-8214-83f36ce92b16">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="0"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="15" isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{main_node1.node1.section2.topic2.question19}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="19">
+			<printWhenExpression><![CDATA[!$P{UnderConstructionProjectInfoImgInfoList}.getData().isEmpty()]]></printWhenExpression>
+			<subreport>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="15" uuid="3cf0d8e3-04a6-4790-83a8-ab103cd39962"/>
+				<dataSourceExpression><![CDATA[$P{UnderConstructionProjectInfoImgInfoList}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubImagePDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="467" height="4" uuid="4c9552ec-700a-46ff-9988-6cab3aac200d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="12">
+			<printWhenExpression><![CDATA[$P{bc0205Remark} != null]]></printWhenExpression>
+			<subreport>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="12" uuid="060d3897-08b0-4b0a-9522-d5ccf30e6a4e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[$P{bc0205Remark}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubRemarkTopicPDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="4">
+			<printWhenExpression><![CDATA[$P{UnderConstructionProjectInfoImgInfoList} != null && !$P{UnderConstructionProjectInfoImgInfoList}.getData().isEmpty()]]></printWhenExpression>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="467" height="4" uuid="b9ea847f-ac41-4c08-a3ea-022db3ca4ede">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="33" splitType="Stretch">
+			<textField textAdjust="StretchHeight">
+				<reportElement x="0" y="16" width="440" height="17" uuid="479f117a-7e3c-416d-aa58-8486f83c8d88">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[!$P{IsExcel} && $P{ParentTitle} != null]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="Sarabun" size="11" isItalic="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ParentTitle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="440" y="16" width="30" height="17" uuid="ee43337c-dfe3-4fee-8151-41c3fc304d1b">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[!$P{IsExcel}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="Sarabun" size="11" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER} + $P{FirstPage} - 1]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

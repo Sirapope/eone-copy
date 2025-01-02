@@ -1,0 +1,18 @@
+package th.or.set.setportal.eonereport.bean.export.phase3;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Content {
+
+    private Integer sequence;
+
+    private String label;
+
+    private String remark;
+
+}

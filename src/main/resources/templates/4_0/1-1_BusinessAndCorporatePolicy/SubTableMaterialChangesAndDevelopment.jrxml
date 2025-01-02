@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubTableMaterialChangesAndDevelopment" pageWidth="467" pageHeight="842" columnWidth="467" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="20044f65-19b3-415e-8e5d-3bfd05062291">
+	<parameter name="column1Header" class="java.lang.String"/>
+	<parameter name="column2Header" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="question" class="java.lang.String"/>
+	<field name="asOfYear" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="29" splitType="Stretch">
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="0" y="0" width="60" height="29" backcolor="#D1D1D1" uuid="59dc8b72-2737-46be-aa82-cfd71b938e23">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="8" bottomPadding="0" rightPadding="8">
+					<pen lineWidth="0.0" lineColor="#212121"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#212121"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#212121"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#212121"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#212121"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Sarabun" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{column1Header}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="60" y="0" width="407" height="29" backcolor="#D1D1D1" uuid="cb79abfd-fd5f-4431-9363-82cb378eacdb">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="8" bottomPadding="0" rightPadding="8">
+					<pen lineWidth="0.0" lineColor="#212121"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#212121"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#212121"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#212121"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#212121"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Sarabun" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{column2Header}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<frame borderSplitType="DrawBorders">
+				<reportElement stretchType="ContainerHeight" mode="Transparent" x="0" y="0" width="467" height="21" isPrintWhenDetailOverflows="true" uuid="42de4a6a-5c6c-4d27-b9e9-4fadcba9f232"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<frame borderSplitType="DrawBorders">
+					<reportElement stretchType="ContainerHeight" x="60" y="0" width="407" height="21" isPrintWhenDetailOverflows="true" uuid="b2ed0432-a404-4e5b-a14a-f0d9803e4ee9">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textField textAdjust="StretchHeight">
+						<reportElement key="" stretchType="ContainerHeight" x="0" y="0" width="407" height="21" uuid="c3a5f2d6-5baf-48ce-aaa3-bba9c0e82f24">
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+						</reportElement>
+						<box topPadding="4" leftPadding="8" bottomPadding="4" rightPadding="8"/>
+						<textElement verticalAlignment="Top" markup="html">
+							<font fontName="Sarabun" size="11"/>
+							<paragraph leftIndent="0" rightIndent="0"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{asOfYear}]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame borderSplitType="DrawBorders">
+					<reportElement stretchType="ContainerHeight" x="0" y="0" width="60" height="21" isPrintWhenDetailOverflows="true" uuid="fc67dcfb-d390-4206-b023-535e09f69760"/>
+					<box>
+						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textField textAdjust="StretchHeight">
+						<reportElement key="" stretchType="ContainerHeight" x="0" y="0" width="60" height="21" uuid="5efac749-52de-4fff-a8a8-b63bd1801d1e">
+							<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+						</reportElement>
+						<box topPadding="4" leftPadding="8" bottomPadding="4" rightPadding="8"/>
+						<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
+							<font fontName="Sarabun" size="11"/>
+							<paragraph leftIndent="0" rightIndent="0"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{question}]]></textFieldExpression>
+					</textField>
+				</frame>
+			</frame>
+		</band>
+	</detail>
+</jasperReport>

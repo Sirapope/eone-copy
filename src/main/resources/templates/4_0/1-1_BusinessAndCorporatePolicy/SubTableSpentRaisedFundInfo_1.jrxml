@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubTableSpentRaisedFundInfo" pageWidth="467" pageHeight="842" columnWidth="467" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="acfc835f-cbe5-4949-a5b1-d2d06521610e">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<style name="Detail">
+		<box>
+			<pen lineWidth="0.25" lineColor="#000000"/>
+			<topPen lineColor="#545454"/>
+			<leftPen lineWidth="0.5"/>
+			<bottomPen lineWidth="0.25" lineColor="#545454"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{first} && $F{last}]]></conditionExpression>
+			<style>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</style>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{first}]]></conditionExpression>
+			<style>
+				<box padding="0">
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#545454"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</style>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{last}]]></conditionExpression>
+			<style>
+				<box>
+					<bottomPen lineWidth="0.5" lineColor="#000000"/>
+				</box>
+			</style>
+		</conditionalStyle>
+	</style>
+	<style name="Header" mode="Opaque" backcolor="#D1D1D1">
+		<box>
+			<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="ExportSpentRaisedFundObjective" uuid="07d95f83-8a12-4226-9245-4667d0aa6d99">
+		<parameter name="Header1" class="java.lang.String"/>
+		<parameter name="Header2" class="java.lang.String"/>
+		<parameter name="Header3" class="java.lang.String"/>
+		<parameter name="Header4" class="java.lang.String"/>
+		<parameter name="NoData" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="objective" class="java.lang.String"/>
+		<field name="periodType" class="java.lang.String"/>
+		<field name="period" class="java.lang.String"/>
+		<field name="expectedAmountType" class="java.lang.String"/>
+		<field name="expectedAmount" class="java.lang.String"/>
+		<field name="spentAmountType" class="java.lang.String"/>
+		<field name="spentAmount" class="java.lang.String"/>
+		<field name="first" class="java.lang.Boolean"/>
+		<field name="last" class="java.lang.Boolean"/>
+	</subDataset>
+	<subDataset name="ExportDescriptive" uuid="f1410a87-27a7-4790-b94f-a2222326ee7a">
+		<parameter name="title" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="title" class="java.lang.String"/>
+		<field name="description" class="java.lang.String"/>
+		<field name="first" class="java.lang.Boolean"/>
+		<field name="last" class="java.lang.Boolean"/>
+	</subDataset>
+	<parameter name="SecurityTypeLabel" class="java.lang.String"/>
+	<parameter name="FundraisingLabel" class="java.lang.String"/>
+	<parameter name="Header1" class="java.lang.String"/>
+	<parameter name="Header2" class="java.lang.String"/>
+	<parameter name="Header3" class="java.lang.String"/>
+	<parameter name="Header4" class="java.lang.String"/>
+	<parameter name="ImplementationObjectives" class="java.lang.String"/>
+	<parameter name="Progress" class="java.lang.String"/>
+	<parameter name="RelateLink" class="java.lang.String"/>
+	<parameter name="Title" class="java.lang.String"/>
+	<parameter name="NoData" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="title" class="java.lang.String"/>
+	<field name="description" class="java.lang.String"/>
+	<field name="first" class="java.lang.Boolean"/>
+	<field name="last" class="java.lang.Boolean"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="34">
+			<textField textAdjust="StretchHeight">
+				<reportElement style="Detail" x="0" y="0" width="467" height="17" uuid="5e0788fb-de78-4467-8336-1ff963606ada">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box topPadding="4" leftPadding="8" bottomPadding="4" rightPadding="8">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement markup="html">
+					<font fontName="Sarabun" size="11" isBold="false"/>
+					<paragraph lineSpacingSize="0.0" leftIndent="0" rightIndent="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new thaicut().wordwrap($F{title},100)]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement style="Detail" x="0" y="17" width="467" height="17" uuid="a7c2421f-078c-462a-841b-a515783ae5b8">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box topPadding="4" leftPadding="8" bottomPadding="4" rightPadding="8">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement markup="html">
+					<font fontName="Sarabun" size="11"/>
+					<paragraph lineSpacingSize="0.0" leftIndent="0" rightIndent="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

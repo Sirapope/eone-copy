@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubShareholderInfoPDF4_0" pageWidth="467" pageHeight="842" columnWidth="467" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="b2e0f011-cc71-4474-b76b-e3f0ba594e39">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<style name="Header" mode="Opaque" backcolor="#D1D1D1" fontName="Sarabun" fontSize="11">
+		<box topPadding="4" bottomPadding="4">
+			<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+		</box>
+		<paragraph leftIndent="8" rightIndent="8"/>
+	</style>
+	<style name="Topic" mode="Opaque" forecolor="#FFFFFF" backcolor="#080000" markup="none" fontName="Sarabun" fontSize="18">
+		<box bottomPadding="4"/>
+	</style>
+	<style name="LeftPadding" fontName="Sarabun" fontSize="11">
+		<paragraph leftIndent="0"/>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{indent} == 1]]></conditionExpression>
+			<style>
+				<box leftPadding="10"/>
+				<paragraph lineSpacingSize="1.0" leftIndent="10"/>
+			</style>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{indent} == null]]></conditionExpression>
+			<style>
+				<paragraph leftIndent="5"/>
+			</style>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{indent} == 0]]></conditionExpression>
+			<style>
+				<paragraph leftIndent="5"/>
+			</style>
+		</conditionalStyle>
+	</style>
+	<style name="Detail">
+		<box>
+			<pen lineWidth="0.25" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5"/>
+			<bottomPen lineWidth="0.0" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Detail1">
+		<box>
+			<pen lineWidth="0.25" lineColor="#000000"/>
+			<topPen lineColor="#545454"/>
+			<leftPen lineWidth="0.0"/>
+			<bottomPen lineWidth="0.25" lineColor="#545454"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{first} && $F{last}]]></conditionExpression>
+			<style>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</style>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{first}]]></conditionExpression>
+			<style>
+				<box padding="0">
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#545454"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</style>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{last}]]></conditionExpression>
+			<style>
+				<box>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.5" lineColor="#000000"/>
+				</box>
+			</style>
+		</conditionalStyle>
+	</style>
+	<subDataset name="StructureInfo" uuid="633a688b-9745-4354-ac63-7813ab835e9d">
+		<parameter name="header" class="java.lang.String"/>
+		<parameter name="year1" class="java.lang.String"/>
+		<parameter name="year2" class="java.lang.String"/>
+		<parameter name="year3" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="asOfYear" class="java.lang.String"/>
+		<field name="asOfYesteryear" class="java.lang.String"/>
+		<field name="asOfYearBeforeYesteryear" class="java.lang.String"/>
+		<field name="question" class="java.lang.String"/>
+		<field name="unit" class="java.lang.String"/>
+		<field name="indent" class="java.lang.Integer"/>
+		<field name="first" class="java.lang.Boolean"/>
+		<field name="last" class="java.lang.Boolean"/>
+		<field name="asterisk" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="Dataset" uuid="b676505d-57ed-4ace-afa3-5472ba6e1dcd">
+		<parameter name="header" class="java.lang.String"/>
+		<parameter name="year1" class="java.lang.String"/>
+		<parameter name="year2" class="java.lang.String"/>
+		<parameter name="year3" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="question" class="java.lang.String"/>
+		<field name="juristicPersons" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	</subDataset>
+	<parameter name="Header1" class="java.lang.String"/>
+	<parameter name="Header3" class="java.lang.String"/>
+	<parameter name="Header4" class="java.lang.String"/>
+	<parameter name="Header2" class="java.lang.String"/>
+	<parameter name="Title" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="question" class="java.lang.String"/>
+	<field name="juristicPersons" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<field name="first" class="java.lang.Boolean"/>
+	<field name="last" class="java.lang.Boolean"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="24">
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="24" uuid="190e6620-3212-4c2e-abe8-5349327f5d9c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="2"/>
+				<textElement verticalAlignment="Middle" markup="styled">
+					<font fontName="Sarabun" size="15" isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Title}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="30">
+			<textField textAdjust="StretchHeight">
+				<reportElement style="Header" positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="139" height="30" uuid="374e1594-8612-4d8f-b193-48bb7e8d07ad">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Sarabun" size="11" isBold="true" pdfFontName="" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Header1}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement style="Header" positionType="Float" stretchType="RelativeToTallestObject" x="139" y="0" width="138" height="30" uuid="9f4ac979-b952-451e-9131-0810311c6f00">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Sarabun" size="11" isBold="true" pdfFontName="" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Header2}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement style="Header" positionType="Float" stretchType="RelativeToTallestObject" x="277" y="0" width="89" height="30" uuid="80b36681-2233-4c5e-a733-9fcfa151fcbf">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Sarabun" size="11" isBold="true" pdfFontName="" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Header3}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement style="Header" positionType="Float" stretchType="RelativeToTallestObject" x="366" y="0" width="101" height="30" uuid="dbf98dcf-e67c-469a-a704-8b691fee6364">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Sarabun" size="11" isBold="true" pdfFontName="" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Header4}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="24" splitType="Prevent">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<printWhenExpression><![CDATA[$P{Header1} != null]]></printWhenExpression>
+			<componentElement>
+				<reportElement stretchType="RelativeToTallestObject" x="139" y="0" width="328" height="24" uuid="972350d7-0c4b-4c1e-b6c1-94919a15e63d">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="StructureInfo" uuid="e1b852e7-5af8-4617-beb1-3df60b3caec4">
+						<dataSourceExpression><![CDATA[$F{juristicPersons}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="138" uuid="8f0c4acb-b8b5-4e81-84a2-0975c14a0d61">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:detailCell height="24">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<box>
+								<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textField textAdjust="StretchHeight">
+								<reportElement key="" stretchType="ContainerHeight" x="0" y="0" width="138" height="24" uuid="a7fc9e0b-8406-46bf-9bd1-a93d38e751b8">
+									<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+									<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+								</reportElement>
+								<box topPadding="4" leftPadding="8" bottomPadding="4" rightPadding="8"/>
+								<textElement verticalAlignment="Top" markup="html">
+									<font fontName="Sarabun" size="11" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+									<paragraph leftIndent="0" rightIndent="0"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{unit}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="89" uuid="7d06a3dd-3714-48f5-a44c-e9d64278a39a">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:detailCell style="Detail" height="24">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<box>
+								<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textField textAdjust="StretchHeight">
+								<reportElement key="" stretchType="ContainerHeight" x="0" y="0" width="89" height="24" uuid="1d1108c2-b610-492c-ba93-1266753f32f0"/>
+								<box topPadding="4" leftPadding="8" bottomPadding="4" rightPadding="8"/>
+								<textElement textAlignment="Right" verticalAlignment="Top" markup="none">
+									<font fontName="Sarabun" size="11" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+									<paragraph leftIndent="0" rightIndent="0"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{asOfYesteryear}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="101" uuid="8b13be36-33c0-468c-8319-4de6ce5f7212">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						<jr:detailCell style="Detail" height="24">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<box>
+								<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textField textAdjust="StretchHeight">
+								<reportElement key="" stretchType="ContainerHeight" x="0" y="0" width="101" height="24" uuid="0bc73550-2ed4-4ee4-9bc3-4699eeef46fe"/>
+								<box topPadding="4" leftPadding="8" bottomPadding="4" rightPadding="8"/>
+								<textElement textAlignment="Right" verticalAlignment="Top" markup="none">
+									<font fontName="Sarabun" size="11" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+									<paragraph leftIndent="0" rightIndent="0"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{asOfYear}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="ContainerHeight" x="0" y="0" width="139" height="24" uuid="59d213cf-30f1-443e-8c29-22d35318d0ec"/>
+				<box topPadding="4" leftPadding="8" bottomPadding="4" rightPadding="8">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement markup="html">
+					<font fontName="Sarabun" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{question}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

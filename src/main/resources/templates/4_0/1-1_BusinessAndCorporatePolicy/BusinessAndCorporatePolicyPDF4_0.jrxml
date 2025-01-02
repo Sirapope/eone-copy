@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="BusinessAndCorporatePolicy" pageWidth="595" pageHeight="842" columnWidth="467" leftMargin="64" rightMargin="64" topMargin="48" bottomMargin="48" uuid="13b0326c-2a91-4c73-b8cf-d88eb20f1b08">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="Detail" mode="Opaque" backcolor="#FFFFFF" fontName="Sarabun">
+		<box bottomPadding="0"/>
+	</style>
+	<style name="Topic" mode="Opaque" forecolor="#FFFFFF" backcolor="#080000" markup="none" fontName="Sarabun" fontSize="18">
+		<box bottomPadding="0"/>
+	</style>
+	<subDataset name="ExportDescriptive" uuid="2c4a8612-2114-49d3-8769-f8749a5b207f">
+		<parameter name="title" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="title" class="java.lang.String"/>
+		<field name="description" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="Dataset1" uuid="6599b389-78ae-4771-a399-982377b5666d">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<subDataset name="StructureInfo" uuid="5361bf09-773c-445d-80dd-73786366aeed">
+		<parameter name="header" class="java.lang.String"/>
+		<parameter name="year1" class="java.lang.String"/>
+		<parameter name="year2" class="java.lang.String"/>
+		<parameter name="year3" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="asOfYear" class="java.lang.String"/>
+		<field name="asOfYesteryear" class="java.lang.String"/>
+		<field name="asOfYearBeforeYesteryear" class="java.lang.String"/>
+		<field name="question" class="java.lang.String"/>
+		<field name="unit" class="java.lang.String"/>
+		<field name="indent" class="java.lang.Integer"/>
+		<field name="first" class="java.lang.Boolean"/>
+		<field name="last" class="java.lang.Boolean"/>
+		<field name="asterisk" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="BusinessStrategiesOverviewList" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="FirstPage" class="java.lang.Integer"/>
+	<parameter name="IsExcel" class="java.lang.Boolean"/>
+	<parameter name="OtherBusinessStrategiesOverviewList" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="BusinessStrategiesOverview1" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
+	<parameter name="businessAndCorporatePolicyRemark" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="bac01Remark" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="businessAndCorporatePolicyIntroduction" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="bac01Introduction" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="ShowBusinessStrategiesOverview1" class="java.lang.Boolean"/>
+	<parameter name="Bac01" class="java.lang.String"/>
+	<parameter name="Bac02" class="java.lang.String"/>
+	<parameter name="Bac03" class="java.lang.String"/>
+	<parameter name="Bac04" class="java.lang.String"/>
+	<parameter name="Bac05" class="java.lang.String"/>
+	<parameter name="ShowBac01" class="java.lang.Boolean"/>
+	<parameter name="ShowBac02" class="java.lang.Boolean"/>
+	<parameter name="bac02Introduction" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="bac02Remark" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="bac03Introduction" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="bac03Remark" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="bac04Introduction" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="bac04Remark" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="bac05Introduction" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="bac05Remark" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="MaterialChangesAndDevelopmentsList" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="SpentRaisedFundPolicy" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="SpentRaisedFundList" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="Year1" class="java.lang.String"/>
+	<parameter name="Year2" class="java.lang.String"/>
+	<parameter name="Year3" class="java.lang.String"/>
+	<parameter name="ShowSpentRaisedFundList" class="java.lang.Boolean"/>
+	<parameter name="ApplicableLaw" class="java.lang.String"/>
+	<parameter name="StructureAndOperation" class="java.lang.String"/>
+	<parameter name="SecuritiesOfferingPolicy" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="SecuritiesOfferingDescription" class="java.lang.String"/>
+	<parameter name="OverallBusinessCorporatePolicyList" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="Title" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="ChairmanMessage" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="ChairmanMessageImage" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="ParentTitle" class="java.lang.String"/>
+	<parameter name="OverallBusinessCorporateShareList" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="Parameter1" class="java.lang.String"/>
+	<parameter name="Language" class="java.lang.String"/>
+	<parameter name="AdditionalImgInfoTitle" class="java.lang.String"/>
+	<parameter name="AdditionalImgInfoList" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="SUBREPORT_FOLDER" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="28">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<subreport>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" isPrintRepeatedValues="false" x="0" y="0" width="467" height="28" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" uuid="a8de1ed6-618e-43d9-ac17-e46d03641ba7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[$P{Title}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "PageTitle.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="28">
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="28" uuid="bc3cd100-a8d3-48a1-885f-8e7c77b45ebf">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="0"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="18" isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BusinessStrategiesOverview1}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="15">
+			<subreport>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="15" isRemoveLineWhenBlank="true" uuid="2ec0bef8-9482-48a6-9418-146fd2021903"/>
+				<dataSourceExpression><![CDATA[$P{businessAndCorporatePolicyIntroduction}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubIntroductionPDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="15">
+			<subreport>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="15" isRemoveLineWhenBlank="true" uuid="060d3897-08b0-4b0a-9522-d5ccf30e6a4e"/>
+				<dataSourceExpression><![CDATA[$P{businessAndCorporatePolicyRemark}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubRemarkTopicPDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="4">
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="466" height="4" uuid="6251db7a-f884-47cc-acfd-6cd357f16bcc">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="24">
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="24" uuid="c1ea418c-265a-4cfc-aab1-b49f96cbb17e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="0"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="15" isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Bac01}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="15">
+			<subreport>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="15" isRemoveLineWhenBlank="true" uuid="335593df-d297-4102-9c81-8a4eacae3049"/>
+				<dataSourceExpression><![CDATA[$P{bac01Introduction}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubIntroductionPDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="15">
+			<printWhenExpression><![CDATA[$P{ChairmanMessage} != null]]></printWhenExpression>
+			<subreport>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="15" isRemoveLineWhenBlank="true" uuid="ecb281b4-14e6-4328-b56a-c3cf6f7ee352"/>
+				<dataSourceExpression><![CDATA[$P{ChairmanMessage}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + $P{SUBREPORT_FOLDER} + "SubBusinessAndCorDescriptionPDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="4">
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="466" height="4" uuid="3ddb3b7e-f63d-4ac6-83e5-6cd88e361240">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="24">
+			<printWhenExpression><![CDATA[$P{ChairmanMessageImage} != null]]></printWhenExpression>
+			<textField textAdjust="StretchHeight">
+				<reportElement style="Detail" mode="Transparent" x="0" y="0" width="467" height="24" uuid="5b77d000-acbb-4982-9c5a-0760c281ac0e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="15" isBold="true"/>
+					<paragraph lineSpacingSize="0.0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{main_node1.node1.section1.topic5.question19}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="19">
+			<printWhenExpression><![CDATA[$P{ChairmanMessageImage} != null && !$P{ChairmanMessageImage}.getData().isEmpty()]]></printWhenExpression>
+			<subreport>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="15" isRemoveLineWhenBlank="true" uuid="5d11bbc1-aeb0-41eb-aa32-dce5e2c25a7c"/>
+				<dataSourceExpression><![CDATA[$P{ChairmanMessageImage}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubImagePDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="466" height="4" uuid="ed09f25f-7f3e-4bb3-bf9d-1fa8c7818fb7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="19">
+			<printWhenExpression><![CDATA[$P{BusinessStrategiesOverviewList} != null]]></printWhenExpression>
+			<subreport>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="15" isRemoveLineWhenBlank="true" uuid="5ba1611e-bf05-4b9c-b278-139ed91dcb00"/>
+				<dataSourceExpression><![CDATA[$P{BusinessStrategiesOverviewList}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + $P{SUBREPORT_FOLDER} + "SubBusinessAndCorDescriptionPDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="466" height="4" uuid="7b8303b3-88cc-4456-b2db-0704db04777d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="19">
+			<printWhenExpression><![CDATA[$P{ShowBac01}]]></printWhenExpression>
+			<subreport>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="15" isRemoveLineWhenBlank="true" uuid="c18a50c0-659c-4c31-8cd8-7e2e725b2366"/>
+				<dataSourceExpression><![CDATA[$P{OtherBusinessStrategiesOverviewList}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + $P{SUBREPORT_FOLDER} + "SubBusinessAndCorDescriptionPDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="466" height="4" uuid="5197f7f5-96b0-4911-ae98-b003d73a83c1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="15">
+			<subreport>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="15" isRemoveLineWhenBlank="true" uuid="8608c1ae-b9b8-4611-a85a-84adaa890df0"/>
+				<dataSourceExpression><![CDATA[$P{bac01Remark}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubRemarkTopicPDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="4">
+			<printWhenExpression><![CDATA[$P{ChairmanMessageImage} != null]]></printWhenExpression>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="466" height="4" uuid="18921eb3-029c-4a37-88dd-d39f3263b045">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="24">
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="24" uuid="f2cc2f13-1683-4e50-b8ab-9b4b4696036a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="0"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="15" isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Bac02}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="15">
+			<subreport>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="15" isRemoveLineWhenBlank="true" uuid="8bdf9713-901b-4d8d-a4a8-94164dbd3c5a"/>
+				<dataSourceExpression><![CDATA[$P{bac02Introduction}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubIntroductionPDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="4">
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="466" height="4" uuid="27495404-2172-410b-a79e-1cc81f9e976f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="24">
+			<printWhenExpression><![CDATA[$P{ShowBac02}]]></printWhenExpression>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="0" y="0" width="467" height="24" uuid="e6ff1246-5e7e-4dff-8df9-ffaf688dac76"/>
+				<box bottomPadding="0"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="15" isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{main_node1.node1.section1.topic2.question1}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="33">
+			<printWhenExpression><![CDATA[$P{ShowBac02}]]></printWhenExpression>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="29" width="466" height="4" uuid="ce37a9b9-fe27-4a6c-a61b-70c05e7b8472">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</frame>
+			<subreport>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="29" isRemoveLineWhenBlank="true" uuid="42fae328-5180-4783-8974-63125d1d38f6"/>
+				<subreportParameter name="column1Header">
+					<subreportParameterExpression><![CDATA[$R{main_node1.node1.section1.topic2.question4}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="column2Header">
+					<subreportParameterExpression><![CDATA[$R{main_node1.node1.section1.topic2.question3}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{MaterialChangesAndDevelopmentsList}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + $P{SUBREPORT_FOLDER} + "SubTableMaterialChangesAndDevelopment.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="15">
+			<subreport>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="15" isRemoveLineWhenBlank="true" uuid="4e768748-9119-4c8c-9cfd-447a45b9b5eb"/>
+				<dataSourceExpression><![CDATA[$P{bac02Remark}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubRemarkTopicPDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="4">
+			<printWhenExpression><![CDATA[$P{ShowBac02}]]></printWhenExpression>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="466" height="4" uuid="7cee5ab1-93a3-4905-9676-abe6dacd696b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="24">
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="24" uuid="846c032d-c820-4d0e-9478-f1dcc35ddcf3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="0"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="15" isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Bac03}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="15">
+			<subreport>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="15" isRemoveLineWhenBlank="true" uuid="5c9d7100-24f1-4543-8f8c-146d0ce218ee"/>
+				<dataSourceExpression><![CDATA[$P{bac03Introduction}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubIntroductionPDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="19">
+			<printWhenExpression><![CDATA[$P{SpentRaisedFundPolicy} != null]]></printWhenExpression>
+			<subreport>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="15" isRemoveLineWhenBlank="true" uuid="ebdc3dca-f9b9-46fd-8bd8-fd22408e3979"/>
+				<dataSourceExpression><![CDATA[$P{SpentRaisedFundPolicy}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubPolicyPDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="466" height="4" uuid="1e826376-8750-4abf-a98b-2ecc563e6db7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="4">
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="466" height="4" uuid="2e655f14-c093-4bed-9ede-7f8c183d7b85">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="24">
+			<printWhenExpression><![CDATA[$P{ShowSpentRaisedFundList}]]></printWhenExpression>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="0" y="0" width="467" height="24" uuid="3b44b404-632c-4322-8663-f332e4c2daa9"/>
+				<box bottomPadding="0"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="15" isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{main_node1.node1.section1.topic2.question2}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="15">
+			<subreport>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="15" isRemoveLineWhenBlank="true" uuid="efb170ef-791e-4911-bba3-6851b9ea85f1">
+					<printWhenExpression><![CDATA[$P{ShowSpentRaisedFundList}]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="SecurityTypeLabel">
+					<subreportParameterExpression><![CDATA[$R{main_node1.node1.section1.topic3.question5}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="FundraisingLabel">
+					<subreportParameterExpression><![CDATA[$R{main_node1.node1.section1.topic3.question17}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="Header1">
+					<subreportParameterExpression><![CDATA[$R{main_node1.node1.section1.topic3.question6}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="Header2">
+					<subreportParameterExpression><![CDATA[$R{main_node1.node1.section1.topic3.question7}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="Header3">
+					<subreportParameterExpression><![CDATA[$R{main_node1.node1.section1.topic3.question8}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="Header4">
+					<subreportParameterExpression><![CDATA[$R{main_node1.node1.section1.topic3.question9}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="ImplementationObjectives">
+					<subreportParameterExpression><![CDATA[$R{main_node1.node1.section1.topic3.question10}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="Progress">
+					<subreportParameterExpression><![CDATA[$R{main_node1.node1.section1.topic3.question13}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="RelateLink">
+					<subreportParameterExpression><![CDATA[$R{main_node1.node1.section1.topic3.question14}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="Title">
+					<subreportParameterExpression><![CDATA[$R{main_node1.node1.section1.topic3.question3}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SUBREPORT_FOLDER">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_FOLDER}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{SpentRaisedFundList}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + $P{SUBREPORT_FOLDER} + "SubTableSpentRaisedFundInfo.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="4">
+			<printWhenExpression><![CDATA[$P{ShowSpentRaisedFundList}]]></printWhenExpression>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="466" height="4" uuid="ec02df1b-fede-471d-9047-707953473adb">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="24">
+			<printWhenExpression><![CDATA[$P{ShowSpentRaisedFundList} && $P{ApplicableLaw} != null]]></printWhenExpression>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="0" y="0" width="467" height="24" isRemoveLineWhenBlank="true" uuid="8dbabd71-d49a-412a-bb09-7acc78117f5b"/>
+				<box bottomPadding="0"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="15" isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{main_node1.node1.section1.topic3.question15}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="21">
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="17" isRemoveLineWhenBlank="true" uuid="2d0965be-5fdb-4948-b1aa-0eaea2aebebb">
+					<printWhenExpression><![CDATA[$P{ShowSpentRaisedFundList} && $P{ApplicableLaw} != null]]></printWhenExpression>
+				</reportElement>
+				<box bottomPadding="2"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="11" isBold="false" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ApplicableLaw}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="17" width="466" height="4" uuid="764c2b05-16d3-4ffb-ab55-e6c453d8b657">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="15">
+			<subreport>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="15" isRemoveLineWhenBlank="true" uuid="6c740174-3233-48ff-b16e-9d22236a28b2"/>
+				<dataSourceExpression><![CDATA[$P{bac03Remark}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubRemarkTopicPDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="4">
+			<printWhenExpression><![CDATA[$P{ShowSpentRaisedFundList} && $P{ApplicableLaw} != null]]></printWhenExpression>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="466" height="4" uuid="f64b58a2-d6ca-41fb-815d-c11d0fb9871a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="24">
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="24" uuid="372e4f91-2baa-42a8-a4de-71c4075ba2a6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="0"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="15" isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Bac04}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="15">
+			<subreport>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="15" isRemoveLineWhenBlank="true" uuid="9c0b02ba-6672-40a4-8fa1-20b7f3677517"/>
+				<dataSourceExpression><![CDATA[$P{bac04Introduction}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubIntroductionPDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="19">
+			<subreport>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="15" isRemoveLineWhenBlank="true" uuid="8225f8da-b355-4cde-bc96-c9049c92acda"/>
+				<dataSourceExpression><![CDATA[$P{SecuritiesOfferingPolicy}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubPolicyPDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="466" height="4" uuid="c52ae9f0-1622-4c59-98e8-398c8b24efb3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="21">
+			<printWhenExpression><![CDATA[$P{SecuritiesOfferingDescription} != null]]></printWhenExpression>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="17" uuid="df68440c-8319-4a77-a124-282ef85d2075">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="2"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="11" isBold="false" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SecuritiesOfferingDescription}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="17" width="466" height="4" uuid="169d9412-5332-459c-8e63-c6d81ba004a7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="15">
+			<subreport>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="15" isRemoveLineWhenBlank="true" uuid="3a6d96b3-52aa-4771-af45-dfbc0e65b7c3"/>
+				<dataSourceExpression><![CDATA[$P{bac04Remark}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubRemarkTopicPDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="4">
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="466" height="4" uuid="537195a5-4cac-4910-bf15-c8274a67105e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="24">
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="24" uuid="5243571a-4791-4ea2-a985-9d4c84b7ef0a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="0"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="15" isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Bac05}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="15">
+			<subreport>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="15" isRemoveLineWhenBlank="true" uuid="86c4850e-6899-4cb6-8711-191d17ed224c"/>
+				<dataSourceExpression><![CDATA[$P{bac05Introduction}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubIntroductionPDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="15">
+			<printWhenExpression><![CDATA[!$P{OverallBusinessCorporatePolicyList}.getData().isEmpty()]]></printWhenExpression>
+			<subreport>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="15" isRemoveLineWhenBlank="true" uuid="a8fc3075-2e95-47d8-8df8-afd6e3644f76"/>
+				<dataSourceExpression><![CDATA[$P{OverallBusinessCorporatePolicyList}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubPolicyPDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="15">
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="200" height="15" uuid="dbe3228b-b4e7-405d-8aea-ff50de7d2f2b">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box leftPadding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Top" markup="html">
+					<font fontName="Sarabun" size="11" isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					<paragraph leftIndent="0" rightIndent="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{main_node1.node1.section1.topic5.question14}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="19">
+			<printWhenExpression><![CDATA[$P{OverallBusinessCorporateShareList} != null]]></printWhenExpression>
+			<subreport>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="15" isRemoveLineWhenBlank="true" uuid="035e37ad-ee4e-4981-899a-0fa30df0b028"/>
+				<dataSourceExpression><![CDATA[$P{OverallBusinessCorporateShareList}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubPolicyPDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="466" height="4" uuid="f29a3786-33c2-4724-96c5-7056a6e7c23e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="15">
+			<subreport>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="15" isRemoveLineWhenBlank="true" uuid="b5b3221d-93ae-4823-934d-15603a76d6d3"/>
+				<dataSourceExpression><![CDATA[$P{bac05Remark}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubRemarkTopicPDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="4">
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="466" height="4" uuid="75eaf1a8-4911-468c-8ed2-0006b4d681c2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+		<band height="24">
+			<printWhenExpression><![CDATA[$P{AdditionalImgInfoTitle} != null]]></printWhenExpression>
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="24" uuid="e5140509-5125-4ac4-9982-6e3ef5b11de0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="0"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Sarabun" size="15" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{AdditionalImgInfoTitle}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="15">
+			<printWhenExpression><![CDATA[$P{AdditionalImgInfoList} != null]]></printWhenExpression>
+			<subreport>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="467" height="15" isRemoveLineWhenBlank="true" uuid="253b9688-7ccb-411d-9aff-f083e96448d0"/>
+				<dataSourceExpression><![CDATA[$P{AdditionalImgInfoList}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubImagePDF4_0.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="4">
+			<printWhenExpression><![CDATA[$P{AdditionalImgInfoList} != null]]></printWhenExpression>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="467" height="4" uuid="66e4ad8d-e16a-40f4-910e-3699101efd7d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</frame>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="33">
+			<textField textAdjust="StretchHeight">
+				<reportElement x="0" y="16" width="440" height="17" uuid="b528d200-04b7-4f69-9ead-74f96fc24753">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[!$P{IsExcel} && $P{ParentTitle} != null]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="Sarabun" size="11" isItalic="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ParentTitle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="440" y="16" width="27" height="17" uuid="825cf870-2051-485a-9c98-ccaee7fe7ebc">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[!$P{IsExcel}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="Sarabun" size="11" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER} + $P{FirstPage} - 1]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

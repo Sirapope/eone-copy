@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubPermanentAppraisalPrice" pageWidth="467" pageHeight="842" columnWidth="467" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="ca2d6c9f-7638-483d-9c5f-e1ab6764e744">
+	<style name="Detail">
+		<box>
+			<pen lineWidth="0.25" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Header" mode="Opaque" backcolor="#D1D1D1" vTextAlign="Middle" fontName="Sarabun" fontSize="11" isBold="true">
+		<box leftPadding="0">
+			<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+		</box>
+	</style>
+	<parameter name="header1" class="java.lang.String"/>
+	<parameter name="header2" class="java.lang.String"/>
+	<parameter name="header3" class="java.lang.String"/>
+	<parameter name="header4" class="java.lang.String"/>
+	<parameter name="header5" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="column1" class="java.lang.String"/>
+	<field name="column2" class="java.lang.String"/>
+	<field name="column3" class="java.lang.String"/>
+	<field name="column4" class="java.lang.String"/>
+	<field name="column5" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<textField textAdjust="StretchHeight">
+				<reportElement style="Header" stretchType="ContainerHeight" x="0" y="0" width="140" height="30" uuid="ddf0967c-42b4-4e16-97d8-e60df5287cc9"/>
+				<box topPadding="4" leftPadding="8" bottomPadding="4" rightPadding="8">
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Sarabun" size="11" isBold="true"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{header1}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement style="Header" stretchType="ContainerHeight" x="140" y="0" width="82" height="30" uuid="9d8f3f37-4d78-4998-b49c-472f681ec67c"/>
+				<box topPadding="4" leftPadding="8" bottomPadding="4" rightPadding="8">
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Sarabun" size="11" isBold="true"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{header2}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement style="Header" stretchType="ContainerHeight" x="222" y="0" width="81" height="30" uuid="734bad15-4de9-4acf-8587-540068353f09"/>
+				<box topPadding="4" leftPadding="8" bottomPadding="4" rightPadding="8">
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Sarabun" size="11" isBold="true"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{header3}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement style="Header" stretchType="ContainerHeight" x="303" y="0" width="81" height="30" uuid="1c3c7541-6443-43a4-b01d-b5a62d9ff5ee">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box topPadding="4" leftPadding="8" bottomPadding="4" rightPadding="8">
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Sarabun" size="11" isBold="true"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{header4}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement style="Header" stretchType="ContainerHeight" x="384" y="0" width="83" height="30" uuid="3672211a-6a52-4f42-80b5-495590d0de8d"/>
+				<box topPadding="4" leftPadding="8" bottomPadding="4" rightPadding="8">
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Sarabun" size="11" isBold="true"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{header5}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField textAdjust="StretchHeight">
+				<reportElement style="Detail" stretchType="ContainerHeight" x="0" y="0" width="140" height="21" isPrintWhenDetailOverflows="true" uuid="caacf39d-c33e-422b-976d-9f62576fdabb">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box topPadding="4" leftPadding="8" bottomPadding="4" rightPadding="8"/>
+				<textElement verticalAlignment="Top" markup="html">
+					<font fontName="Sarabun" size="11"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{column1}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement style="Detail" stretchType="ContainerHeight" x="140" y="0" width="82" height="21" isPrintWhenDetailOverflows="true" uuid="1b2784c3-f9aa-4c51-a73c-74803db356bc"/>
+				<box topPadding="4" leftPadding="8" bottomPadding="4" rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Top" markup="html">
+					<font fontName="Sarabun" size="11"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{column2}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement style="Detail" stretchType="ContainerHeight" x="222" y="0" width="81" height="21" isPrintWhenDetailOverflows="true" uuid="cd75fa76-ea60-4075-bc80-f99b30764bdd"/>
+				<box topPadding="4" leftPadding="8" bottomPadding="4" rightPadding="8"/>
+				<textElement verticalAlignment="Top" markup="html">
+					<font fontName="Sarabun" size="11"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{column3}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement style="Detail" stretchType="ContainerHeight" x="303" y="0" width="81" height="21" isPrintWhenDetailOverflows="true" uuid="c7db291b-092b-43a9-b811-003fa791d1bc"/>
+				<box topPadding="4" leftPadding="8" bottomPadding="4" rightPadding="8"/>
+				<textElement verticalAlignment="Top" markup="html">
+					<font fontName="Sarabun" size="11"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{column4}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement style="Detail" stretchType="ContainerHeight" x="384" y="0" width="83" height="21" isPrintWhenDetailOverflows="true" uuid="05b54f42-9ae2-4083-8b46-aaf8a99761c8"/>
+				<box topPadding="4" leftPadding="8" bottomPadding="4" rightPadding="8"/>
+				<textElement verticalAlignment="Top" markup="html">
+					<font fontName="Sarabun" size="11"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{column5}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
